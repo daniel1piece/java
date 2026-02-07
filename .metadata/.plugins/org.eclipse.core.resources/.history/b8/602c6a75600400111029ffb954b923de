@@ -1,0 +1,7 @@
+package platzi.play.utils;
+
+public class ScannerUtils {
+	public String capturarTexto(String mensaje) {
+		
+	}
+}

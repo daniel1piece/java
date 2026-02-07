@@ -1,0 +1,12 @@
+package platzi.play.utils;
+
+import java.util.Scanner;
+
+public class ScannerUtils {
+	public static Scanner scanner = new Scanner(System.in);
+	
+	public String capturarTexto(String mensaje) {
+		System.out.println(mensaje + ": ");
+		return 
+	}
+}

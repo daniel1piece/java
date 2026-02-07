@@ -1,0 +1,24 @@
+package platzi.play.contenido;
+
+public class Pelicula {
+	public String titulo;
+	public String descripcion;
+	public int duracion;
+	public String genero;
+	public int anio_estreno;
+	public double calificacion;
+	public boolean disponible;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+

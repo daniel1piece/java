@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+import platzi.play.contenido.Genero;
 import platzi.play.contenido.Pelicula;
 
 public class Plataforma {
@@ -38,9 +39,9 @@ public class Plataforma {
 		 
 	}
 	
-	public List<Pelicula> buscarPorGenero(String genero) {
+	public List<Pelicula> buscarPorGenero(Genero genero) {
 		return contenido.stream()
-			   .filter(elemento -> elemento.getGenero().equalsIgnoreCase(genero))
+			   .filter(elemento -> elemento.getGenero().equals(genero))
 			   .toList();
 	}
 	

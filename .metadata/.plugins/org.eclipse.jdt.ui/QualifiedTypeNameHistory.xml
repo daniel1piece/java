@@ -7,4 +7,12 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
     <fullyQualifiedTypeName name="platzi.play.contenido.Pelicula"/>
+    <fullyQualifiedTypeName name="platzi.play.contenido.Genero"/>
+    <fullyQualifiedTypeName name="platzi.play.contenido.Lenguage"/>
+    <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
+    <fullyQualifiedTypeName name="platzi.play.contenido.Calidad"/>
+    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+    <fullyQualifiedTypeName name="platzi.play.excepcion.PeliculaExistenteExcepcion"/>
+    <fullyQualifiedTypeName name="platzi.play.contenido.ResumenContenido"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

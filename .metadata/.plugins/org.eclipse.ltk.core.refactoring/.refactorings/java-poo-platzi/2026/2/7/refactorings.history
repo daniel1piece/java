@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;platzi.play.exception&apos; to &apos;platzi.play.excepcion&apos;&#x0A;- Original project: &apos;java-poo-platzi&apos;&#x0A;- Original element: &apos;java-poo-platzi/src/platzi.play.exception&apos;&#x0A;- Renamed element: &apos;java-poo-platzi/src/platzi.play.excepcion&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;platzi.play.exception&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;platzi.play.exception" name="platzi.play.excepcion" qualified="false" references="true" stamp="1770756250644" textual="false" version="1.0"/>
+</session>

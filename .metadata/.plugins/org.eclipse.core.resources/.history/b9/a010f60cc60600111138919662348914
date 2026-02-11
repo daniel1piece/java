@@ -1,0 +1,107 @@
+package platzi.play.plataforma;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import platzi.play.contenido.Genero;
+import platzi.play.contenido.Pelicula;
+import platzi.play.contenido.ResumenContenido;
+import platzi.play.excepcion.PeliculaExistenteExcepcion;
+
+public class Plataforma {
+	private String nombre;
+	private List<Pelicula> contenido;
+	private Map<Pelicula, Integer> vizualicaciones;
+	
+	public Plataforma(String nombre) {
+		this.nombre = nombre;
+		this.contenido = new ArrayList<>();
+		this.vizualicaciones = new HashMap<Pelicula, Integer>();
+	}
+	
+	public void agregar(Pelicula elemento) {
+		Pelicula contenido = this.buscarPorTitulo(elemento.getTitulo());
+		
+		if (contenido != null) {
+			throw new PeliculaExistenteExcepcion(contenido.getTitulo());
+		}
+		
+		this.contenido.add(elemento);
+	}
+	
+	public List<String>  getTitulos() {
+		return contenido.stream()
+		.map(contenido -> contenido.getTitulo())
+		.toList();
+	}
+	
+	public List<ResumenContenido> getResumenes() {
+		return contenido.stream()
+			   .map(contenido -> new ResumenContenido(
+			    contenido.getTitulo(), contenido.getDuracion(), contenido.getGenero()))
+			   .toList();
+	}
+	
+	public void eliminar(Pelicula elemento) {
+		this.contenido.remove(elemento);
+	}
+	
+	public Pelicula buscarPorTitulo(String titulo) {
+		return this.contenido.
+		stream().filter(elemento -> 
+		elemento.getTitulo().equalsIgnoreCase(titulo))
+		.findFirst()
+		.orElse(null);	
+		 
+	}
+	
+	public List<Pelicula> buscarPorGenero(Genero genero) {
+		return contenido.stream()
+			   .filter(elemento -> elemento.getGenero().equals(genero))
+			   .toList();
+	}
+	
+	public List<Pelicula> getPopulares(int cantidad) {
+		return contenido.stream()
+				.sorted(Comparator.comparingDouble(
+				 Pelicula::getCalificacion
+				).reversed())
+				.limit(cantidad)
+			   .toList();
+	}
+	
+	public int getDuracionTotal() {
+		return contenido.stream()
+			   .mapToInt(Pelicula::getDuracion)
+			   .sum();
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public List<Pelicula> getContenido() {
+		return contenido;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
